@@ -14,13 +14,16 @@ This project demonstrates the core concepts of Evolutionary Algorithms. It initi
 
 ##  Built With
 * **Python 3.x**
-
-##  How to Run
+* 
+## 💻 How to Run
 1. Clone the repository:
    ```sh
    git clone [https://github.com/goktugkarakokcek/Genetic-Algorithm.git](https://github.com/goktugkarakokcek/Genetic-Algorithm.git)
+
    cd Genetic-Algorithm
+
    python GenetikAlg.py
+
 ## Example Output
 Mutasyon: 3. Çocuğun, 1. Geni değişti.(Z->A)
 En yüksek fitness değerine sahip bireyler: [[8, ['A', 'H', 'M', 'E', 'T', 'G', 'O', 'K']], ...]
