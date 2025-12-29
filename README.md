@@ -19,3 +19,12 @@ This project demonstrates the core concepts of Evolutionary Algorithms. It initi
 1. Clone the repository:
    ```sh
    git clone [https://github.com/goktugkarakokcek/Genetic-Algorithm.git](https://github.com/goktugkarakokcek/Genetic-Algorithm.git)
+   cd Genetic-Algorithm
+   python GenetikAlg.py
+## Example Output
+Mutasyon: 3. Çocuğun, 1. Geni değişti.(Z->A)
+En yüksek fitness değerine sahip bireyler: [[8, ['A', 'H', 'M', 'E', 'T', 'G', 'O', 'K']], ...]
+
+Jenerasyon: 334 | En İyi Puan: 8 | En İyi Birey: ['A', 'H', 'M', 'E', 'T', 'G', 'O', 'K']
+Hedef Kelime: ['A', 'H', 'M', 'E', 'T', 'G', 'O', 'K']
+Toplam Jenerasyon: 334
