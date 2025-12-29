@@ -18,7 +18,7 @@ This project demonstrates the core concepts of Evolutionary Algorithms. It initi
 ## 💻 How to Run
 1. Clone the repository:
    ```sh
-   git clone [https://github.com/goktugkarakokcek/Genetic-Algorithm.git](https://github.com/goktugkarakokcek/Genetic-Algorithm.git)
+   git clone https://github.com/goktugkarakokcek/Genetic-Algorithm.git
 
    cd Genetic-Algorithm
 
