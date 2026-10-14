@@ -1,6 +1,5 @@
 import random
 
-# Konfigürasyon değişkenleri global alana çekildi
 TARGET_WORD = "AHMETGOK"
 CHROMOSOME_LENGTH = len(TARGET_WORD)
 ALPHABET = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','R','S','T','U','V','Y','Z']
@@ -47,7 +46,7 @@ def selection(current_population, target):
     
     mating_pool = scored_population[:mating_pool_size]
     
-    print("En yüksek fitness değerine sahip bireyler: ", mating_pool)
+    print("Individuals with the highest fitness value: ", mating_pool)
     
     return mating_pool, best_score, best_individual
 
@@ -61,7 +60,6 @@ def crossover(mating_pool, target_population_size, length):
         parent1 = parents[0][1]
         parent2 = parents[1][1]
 
-        # Çaprazlama noktası kelime uzunluğuna göre dinamik hale getirildi
         crossover_point = random.randint(1, length - 1)
 
         child = parent1[:crossover_point] + parent2[crossover_point:]
@@ -72,7 +70,7 @@ def crossover(mating_pool, target_population_size, length):
         next_generation.append(chromosome)
         
     print("-" * 20)
-    print("Oluşan yeni nesil: ", next_generation)
+    print("New generation: ", next_generation)
     
     return next_generation, offspring_count
         
@@ -84,24 +82,23 @@ def mutation(population, offspring_count, length):
                 new_gene = random.choice(ALPHABET)
                 population[i][j] = new_gene
                 
-                print(f"Mutasyon:{i+1}. Çocuğun,{j+1}. Geni değişti.({old_gene}->{new_gene})")
+                print(f"Mutation: Child {i+1}, Gene {j+1} changed. ({old_gene}->{new_gene})")
                 
     return population            
 
 if __name__ == "__main__":
-    population_size = int(input('Popülasyon Kaç Bireyden Oluşsun?: '))
+    population_size = int(input('Population Size?: '))
     population = generate_population(population_size, CHROMOSOME_LENGTH)
     generation = 1
 
     while True:
         mating_pool, best_score, best_chromosome = selection(population, TARGET_WORD)
         
-        print(f"\nJenerasyon: {generation} | En İyi Puan: {best_score} | En İyi Birey: {best_chromosome}")
+        print(f"\nGeneration: {generation} | Best Score: {best_score} | Best Individual: {best_chromosome}")
 
-        # Bitiş koşulu artık dinamik kelime uzunluğuna bağlı
         if best_score == CHROMOSOME_LENGTH:
-            print(f"Hedef Kelime: {''.join(best_chromosome)}")
-            print(f"Toplam Jenerasyon: {generation}")
+            print(f"Target Word: {''.join(best_chromosome)}")
+            print(f"Total Generations: {generation}")
             break
         
         next_generation, offspring_count = crossover(mating_pool, population_size, CHROMOSOME_LENGTH)
