@@ -22,12 +22,15 @@ This project demonstrates the core concepts of Evolutionary Algorithms. It initi
 
    cd Genetic-Algorithm
 
-   python GenetikAlg.py
+   python GeneticAlg.py
 
-## Example Output
-Mutasyon: 3. Çocuğun, 1. Geni değişti.(Z->A)
-En yüksek fitness değerine sahip bireyler: [[8, ['A', 'H', 'M', 'E', 'T', 'G', 'O', 'K']], ...]
+## ⚠️ Project Scope and Limitations (Toy Problem)
 
-Jenerasyon: 334 | En İyi Puan: 8 | En İyi Birey: ['A', 'H', 'M', 'E', 'T', 'G', 'O', 'K']
-Hedef Kelime: ['A', 'H', 'M', 'E', 'T', 'G', 'O', 'K']
-Toplam Jenerasyon: 334
+This project is a foundational "Toy Problem" developed strictly for educational purposes to understand the core mechanics of Genetic Algorithms (GAs). 
+
+**Key Technical Notes:**
+* **Architecture:** Uses a basic string-matching fitness function and Truncation Selection.
+* **Limitations:** The extreme elitism (retaining 50% of the population) and single-point crossover mechanics make it prone to premature convergence. 
+* **Disclaimer:** This specific architecture is **not** suitable for real-world, complex optimization tasks (such as the Traveling Salesperson Problem or routing algorithms), which require permutation-based chromosomes (e.g., Order Crossover) and proportional selection methods (e.g., Tournament or Roulette Wheel Selection). 
+
+This repository serves as a baseline learning experiment before moving on to advanced, constraint-based optimization models.
